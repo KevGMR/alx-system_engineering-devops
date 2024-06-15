@@ -13,8 +13,7 @@ def number_of_subscribers(subreddit):
             data = response.json()
             subscribers = data['data']['subscribers']
             return subscribers
-        else:
-            return 0  # Invalid subreddit or other error
+        return 0  # Invalid subreddit or other error
     except Exception as e:
         print(f"Error: {e}")
         return 0  # Return 0 if an exception occurs
