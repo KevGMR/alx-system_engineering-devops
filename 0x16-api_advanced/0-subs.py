@@ -9,8 +9,8 @@ def number_of_subscribers(subreddit):
     # headers = {'User-Agent': 'MyBot/0.0.1'}
 
     req = requests.get(
-        "https://www.reddit.com/r/{}/about.json".format(subreddit),
-        headers={"User-Agent": "Custom"}, timeout=10
+        "https://www.reddit.com/r/{:s}/about.json".format(subreddit),
+        headers={"User-Agent": "Custom"}, timeout=10, allow_redirects=False
     )
 
     if req.status_code == 200:
